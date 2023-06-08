@@ -16,9 +16,10 @@ import TitlePage from '../../../shared/TitlePage';
 interface CartProps {
   message?: string;
   isSigned?: boolean;
+  to?: string;
 }
 
-const Cart: React.FC<CartProps> = ({ message, isSigned = false }) => {
+const Cart: React.FC<CartProps> = ({ message, isSigned = false, to}) => {
   const { userInfo, signOut } = useAuth();
 
   const navigate = useNavigate();
